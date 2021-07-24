@@ -1,24 +1,51 @@
+@mixin boxSizing {
+    box-sizing: border-box;
+}
+
 @mixin flexBox($direction, $alignItems, $justifyContent) {
     display: flex;
     flex-direction: $direction;
     align-items: $alignItems;
     justify-content: $justifyContent;
 }
-
-@mixin boxSizing {
-    box-sizing: border-box;
+@mixin circle($width, $height, $background){
+    width:$width;
+    height:$height;
+    background: $background;
+    border-radius: 100%;
 }
 
-@for $i from 0 through 24 {
+@for $i from 1 through 24 {
     .flex_#{$i} {
         flex: $i;
     }
 }
 
-@for $i from 1 through 20 {
-    [data-row-count="#{$i}"] {
-        .data_row {
-            width: calc(100% / #{$i});
+/* 指定一行顯示幾個元素，element UI採24分、Bootstrap則是12分，這裡用element UI 
+@mixin dataRowCount {
+    @for $i from 1 through 24 {
+        [data-row-count="#{$i}"] {
+            .data_row {
+                width: calc(100% / #{$i});
+            }
         }
     }
 }
+*/
+/*
+@for $i from 1 through 24 {
+    .flex_#{$i} {
+        background: $lightGray;
+        flex:$i;
+        margin-bottom: 10px;
+        @if $i ==1{
+            width:100%;
+            height: 100%;
+        }@else if $i ==2{
+            width:48%;
+            height: 70%;
+        }
+        
+    }
+}
+*/
