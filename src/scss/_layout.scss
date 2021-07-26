@@ -127,26 +127,26 @@
             color: $darkGray;
             font-size: 12px;
             line-height: 16px;
-            span{
-                color: $black;
-                margin-top: 15px;
-                font-size: 15px;
-            }
+            margin-bottom: 15px;
+        }
+        span{
+            color: $black;
+            font-size: 15px;
         }
     }
 }
 .footer{
     background: $black;
-    position: relative;
-    .img_logo{
-        position: absolute;
-        left:706px;
-        top:-25px;
-    }
     .container_footer{
         max-width: 740px;
         margin: 0 auto;
         padding-top: 80px;
+        position: relative;
+        .img_logo{
+            position: absolute;
+            top:-25px;
+            left: 230px;
+        }
         ul{
             h2{
                 color: $white;
