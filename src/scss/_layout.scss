@@ -1,20 +1,181 @@
-.data_row {
-    @include boxSizing();
-    border: 1px solid #ccc;
-    min-height: 60px;
-    word-break: break-all;
+.container{
+    max-width: 1260px;
+    margin: 0 auto;
+}
+.header{
+    background: $lightBlack;
+    color: $white;
+    padding: 15px;
+    p{
+        font-size: 36px;
+        margin-left: 18px;
+    }
+    ul li a{
+        font-size: 15px;
+        margin-left: 48px;
+    }
+}
+.pc_banner_1{
+    background: $black;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    margin-bottom: 47px;
+    h2{
+        font-size: 120px;
+        color: $white;
+        margin-bottom: 24px;
+    }
+    p{
+        font-size: 24px;
+        color: $red;
+        margin-bottom: 20px;
+        letter-spacing: 16px;
+    }
+    a{
+        display: block;
+        border: 2px solid $white;
+        text-align: center;
+        width: 169px;
+        padding: 15px 50px;
+    }
+}
+.pc_banner{
+    margin-bottom: 60px;
+    .pc_banner_2{
+        background: url(../img/cosmetic/pc_banner_2.png);
+        background-color: $black;
+        background-repeat: no-repeat;
+        width: 620px;
+        height: 300px;
+        position: relative;
+        div{
+            position: absolute;
+            top:50px;
+            right: 20px;
+            img{
+                display: block;
+                margin: auto;
+            }
+            h2{
+                color: $white;
+                font-size: 41px;
+                margin-bottom: 16px;
+                margin-top: 27px;
+            }
+            p{
+                color: $pink;
+                text-align: center;
+            }
+        }
+    }
+    .pc_banner_3{
+        width: 620px;
+        border: 1px solid $lightGray;
+        background-color: $white;
+        position: relative;
+        .subTitle{
+            position: absolute;
+            left:38px;
+            top:77px;
+            h2{
+                font-size: 60px;  
+                margin-bottom: 27px;  
+            }
+            p{
+                font-size: 26px;
+                margin-bottom: 21px;
+            } 
+            a{
+                display: block;
+                color: $black;
+                text-align: center;
+                width: 169px;
+                padding: 15px 0 15px 0;
+                border: 2px solid $black;
+            }
+
+        } 
+    }
+}
+.product{
+    margin-bottom: 120px;
+    .list a{
+        display: block;
+        border: 1px solid $lightGray;
+        text-align: center;
+        line-height: 40px;
+        width: 168px;
+        color: $black;
+        margin-bottom: 27px;   
+    }
+    .list a:hover{
+        background: $black;
+        color: $white;
+    }
+    .item{
+        h2{
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+        div{
+            background: $middleRed;
+            width: 35px;
+            height: 5px;
+            margin-bottom: 15px;
+        }
+        p{
+            color: $darkGray;
+            font-size: 12px;
+            line-height: 16px;
+            span{
+                color: $black;
+                margin-top: 15px;
+                font-size: 15px;
+            }
+        }
+    }
+}
+.footer{
+    background: $black;
+    position: relative;
+    .img_logo{
+        position: absolute;
+        left:706px;
+        top:-25px;
+    }
+    .container_footer{
+        max-width: 740px;
+        margin: 0 auto;
+        padding-top: 80px;
+        ul{
+            h2{
+                color: $white;
+                font-size: 16px;
+                margin-bottom: 12px;
+            }
+            div{
+                background: $middleRed;
+                width: 35px;
+                height: 2px;
+                margin-bottom: 18px;
+            }
+            p{
+                color: $darkGray;
+                margin-bottom: 27px;
+            }
+        }
+        .news_letter{
+            margin: auto;
+            h2{ 
+                font-size: 21px;
+                color: $darkGray;
+                margin-bottom: 20px;
+            }
+            p{
+                color: $darkGray;
+                margin-bottom: 30px;
+            }
+        } 
+    }
 }
 
-.test {
-    width: 500px;
-    height: 300px;
-    border: 1px solid #333;
-}
-
-.xs-box {
-    display: block;
-    width: 60px;
-    height: 60px;
-    background: #333;
-    margin: 0.5rem;
-}

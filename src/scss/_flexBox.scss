@@ -63,7 +63,10 @@
         &.bottom_right{
             @include flexBox(row, flex-end, flex-end);
         }
-
+        &.center_right{
+            @include flexBox(row, center, flex-end);
+        }
+        
         &.stretch{
             align-items: stretch;
         }

@@ -10,5 +10,9 @@ html {
         font-family: "Microsoft JhengHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
         touch-action: manipulation;
         height: 100%;
+        a{
+            text-decoration: none;
+            color: $white;
+        }
     }
 }
