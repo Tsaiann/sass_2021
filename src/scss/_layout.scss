@@ -272,6 +272,7 @@
             margin: 0 auto;
         }
         ul{
+            margin-bottom: 30px;
             h2{
                 color: $white;
                 font-size: 16px;
@@ -289,15 +290,23 @@
             }
         }
         .news_letter{
+            max-width: 315px;
             margin: auto;
             h2{ 
                 font-size: 21px;
                 color: $darkGray;
                 margin-bottom: 20px;
+                text-align: center;
             }
             p{
                 color: $darkGray;
                 margin-bottom: 30px;
+                white-space: nowrap;
+            }
+            div{
+                border: 1px solie $white;
+                height: 40px;
+                width: 300px;
             }
         } 
     }
@@ -316,6 +325,21 @@
                 }
                 li{
                     margin-bottom: 15px;
+                }
+            }
+            .news_letter{
+                padding-left: 30px;
+                h2{ 
+                    text-align: left;
+                    font-size: 25px;
+                    color: $darkGray;
+                    margin-bottom: 20px;
+                    
+                }
+                p{
+                    margin-bottom: 40px;
+                    font-size: 12px;
+                    word-break: keep-all;
                 }
             }
         }
