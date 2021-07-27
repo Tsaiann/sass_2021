@@ -6,3 +6,13 @@ $middleRed:#F05457;
 $pink:#F8B2AD;
 $darkGray:#808284;
 $lightGray:#F1F2F2;
+
+
+
+
+//screen
+@mixin mobile{
+    @media screen and (max-width:1199px){
+        @content
+    }
+}

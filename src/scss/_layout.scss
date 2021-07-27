@@ -14,12 +14,17 @@
         font-size: 15px;
         margin-left: 48px;
     }
+    @include mobile{
+        ul li a{
+            display: none;
+        }
+    }
 }
-.pc_banner_1{
+.banner_1{
     background: $black;
     padding-top: 70px;
     padding-bottom: 70px;
-    margin-bottom: 47px;
+    margin-bottom: 47px; 
     h2{
         font-size: 120px;
         color: $white;
@@ -38,8 +43,31 @@
         width: 169px;
         padding: 15px 50px;
     }
+    @include mobile{
+        img{
+            width: 70%;
+            margin: 0 auto;
+        }
+        .box1{
+            width: 70%;
+            margin: 0 auto;
+            h2{
+                font-size: 54px;
+            }
+            p{
+                font-size: 12px;
+                white-space:nowrap;
+                letter-spacing: 8px;
+            }
+            a{
+                width: 40%;
+                margin: 0 auto;
+                white-space:nowrap;
+            }
+        }
+    }
 }
-.pc_banner{
+.banner_2{
     margin-bottom: 60px;
     .pc_banner_2{
         background: url(../img/cosmetic/pc_banner_2.png);
@@ -93,31 +121,108 @@
                 padding: 15px 0 15px 0;
                 border: 2px solid $black;
             }
-
         } 
+    }
+    @include mobile{
+        .pc_banner_2{
+            background: url(../img/cosmetic/mobile_banner_2.png);
+            background-repeat: no-repeat;
+            background-color: $black;
+            height: 154px;
+            width: 100%;
+            margin-bottom: 8px;
+            div{
+                position: absolute;
+                top:22px;
+                right: 16px;
+                img{
+                    display: block;
+                    margin: auto;
+                }
+                h2{
+                    color: $white;
+                    font-size: 21px;
+                    margin-bottom: 5px;
+                    margin-top: 15px;
+                }
+                p{
+                    font-size: 9px;
+                    color: $pink;
+                    text-align: center;
+                } 
+            }
+        }
+        .pc_banner_3{
+            img{
+                display: none;
+            }
+            background: url(../img/cosmetic/mobile_banner_3.png);
+            background-repeat: no-repeat;
+            height: 154px;
+            width: 100%;
+            .subTitle{
+                position: absolute;
+                left:18px;
+                top:38px;
+                h2{
+                    font-size: 40px;  
+                    margin-bottom: 12px;  
+                }
+                p{
+                    font-size: 15px;
+                    margin-bottom: 10px;
+                } 
+                a{
+                    font-size: .1rem;
+                    display: block;
+                    color: $black;
+                    text-align: center;
+                    width: 88px;
+                    border: 2px solid $black;
+                }
+            } 
+        }
     }
 }
 .product{
     margin-bottom: 120px;
-    .list a{
+    .list {
+        a{
         display: block;
         border: 1px solid $lightGray;
         text-align: center;
         line-height: 40px;
         width: 168px;
         color: $black;
-        margin-bottom: 27px;   
-    }
-    .list a:hover{
+        margin-bottom: 27px;
+        }
+        a:hover{
         background: $black;
         color: $white;
+        }   
+        .display_none{
+            display: none;
+        }
+    } 
+    @include mobile{
+        .list {
+            a{
+            width: 100%;
+            }
+            .display_none{
+            display: block;
+            }
+            .display_block{
+            display: none;
+            }
+        }  
     }
     .item{
         h2{
             font-size: 15px;
             margin-bottom: 5px;
         }
-        div{
+        .border{
             background: $middleRed;
             width: 35px;
             height: 5px;
@@ -133,6 +238,24 @@
             color: $black;
             font-size: 15px;
         }
+        @include mobile{
+            li{
+                width: 100%;
+                @include flexBox(row,center,center);
+                img{
+                    width: 30%;
+                }
+                .rwd{
+                    width: 60%;
+                    margin-left: 15px;
+                    p{
+                        overflow: scroll;
+                        height: 16px;
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+        }
     }
 }
 .footer{
@@ -146,6 +269,7 @@
             position: absolute;
             top:-25px;
             left: 230px;
+            margin: 0 auto;
         }
         ul{
             h2{
@@ -177,5 +301,25 @@
             }
         } 
     }
+    .container_footer{
+        @include mobile{
+            .img_logo{
+                position: absolute;
+                top: -25px;
+                left: 30px;
+            }
+            ul{
+                @include flexBox(column,flex-start,flex-start);
+                padding-left: 30px;
+                p{
+                    margin-bottom: 15px;
+                }
+                li{
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+    
 }
 
