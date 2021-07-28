@@ -42,6 +42,16 @@
         //如果同時在html寫上v_center和h_center不論他們寫的順序一定都是吃到排在後面的h_center!(考試會考)
         &.v_center{
             @include flexBox(row, center, flex-start);
+            
+            &.left {
+                justify-content: flex-start;
+            }
+            &.center {
+                justify-content: center;
+            }
+            &.right {
+                justify-content: flex-end;
+            }
         }
 
         &.h_center{
@@ -63,9 +73,6 @@
         &.bottom_right{
             @include flexBox(row, flex-end, flex-end);
         }
-        &.center_right{
-            @include flexBox(row, center, flex-end);
-        }
         
         &.stretch{
             align-items: stretch;
@@ -80,7 +87,16 @@
 
         &.h_center{
             @include flexBox(column, center, flex-start);
-
+            
+            &.left {
+                align-items: flex-start;
+            }
+            &.center {
+                align-items: center;
+            }
+            &.right {
+                align-items: flex-end;
+            }
         }
         &.h_end{
             @include flexBox(column, flex-end, flex-start);

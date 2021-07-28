@@ -2,10 +2,14 @@
     max-width: 1260px;
     margin: 0 auto;
 }
+#menu_control{
+    position: absolute;
+}
 .header{
     background: $lightBlack;
     color: $white;
     padding: 15px;
+    position: relative;
     p{
         font-size: 36px;
         margin-left: 18px;
@@ -14,10 +18,52 @@
         font-size: 15px;
         margin-left: 48px;
     }
+    nav, .menu_btn{
+        display: none;
+    }
     @include mobile{
+        .logo p{
+            font-size: 27px;
+        }
         ul li a{
             display: none;
         }
+        nav{
+            display: block;
+            position: absolute;
+            width: 100%;
+            background: $black;
+            top: 66px;
+            left: -1000px;
+            z-index: 10;
+            a{
+                display: block;
+                width: 100%;
+                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+        }
+        .menu_btn{
+            display: block;
+            width: 100px;
+            span{
+                opacity: 0;
+            }
+        } 
+        .menu_btn::before{
+            content: "";
+            display: block;
+            height: 2px;
+            width: 20px;
+            margin: 0 auto;
+            background: $white;
+            box-shadow: 0px 8px 0px $white,0px -8px 0px;
+        }
+    }
+}
+@include mobile{
+    #menu_control:checked ~ .header nav{
+        left:0;
     }
 }
 .banner_1{
