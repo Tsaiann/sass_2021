@@ -1,0 +1,60 @@
+.footer{
+    background: $black;
+    .container_footer{
+        @include container(740px);
+        position: relative;
+        .contact{
+            position: absolute;
+            top: -25px;
+            a{
+                margin-left: 10px;
+            }
+        }
+        ul{
+            padding: 80px 30px 60px 30px;
+            color: $white;
+            h2::after{
+                @include pseudo_1(35px,2px,$middleRed);
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+            p{ 
+                @include font_style(1rem,$darkGray,15px);
+            }
+        }
+        @include mobile_2{
+            ul{
+                @include flexBox(column,flex-start,center);
+                margin: 0 auto;
+            }
+            h2{
+                padding-top: 40px;
+            }
+        }
+        .news_letter{
+            h2{
+                @include font_style(1.5rem,$lightGray,30px);
+            }
+            div{
+                input{
+                    border: 1px solid $lightGray;
+                    background: $black;
+                    line-height: 36px;
+                    color: $white;
+                }
+                button{
+                    @include font_style(14px,$lightGray,60px);
+                    padding: 10px;
+                    color: $black;
+                    border:1px solid $white;
+                }
+            }
+        }
+        @include mobile_2{
+            .news_letter{
+                @include flexBox(column,flex-start,center);
+                padding-left: 30px;
+            }
+        }
+    }
+}

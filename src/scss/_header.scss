@@ -1,0 +1,72 @@
+#menu_control{
+    position: absolute;
+    z-index: -1;
+}
+.header{
+    height: 80px;
+    width: 100%;
+    background: $lightBlack;
+    div{
+        height: 100%;
+        padding: 0 15px;
+    }
+    p{
+        font-size: 36px;
+        margin-left: 10px;
+    }
+    ul{ 
+        a{
+            padding-bottom: 5px;
+        }
+        a:hover{
+            border-bottom: 2px solid $middleRed;
+        }
+    }
+    nav, .menu_btn{
+        display: none;
+    }
+    @include mobile{
+        div{
+            ul li a{
+                display: none;
+            }
+            .menu_btn{
+                display: block;
+                position: relative;
+                width: 100px;
+                span{
+                opacity: 0;
+                }
+            }
+            .menu_btn::before{
+                @include pseudo_1(20px,2px,$white);
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin:auto;
+                box-shadow: 0px 8px 0px $white,0px -8px 0px $white;
+            }
+        }
+        nav{
+            display: block;
+            position: absolute;
+            width: 100%;
+            background: $black;
+            top: 80px;
+            left: -10000px;
+            z-index: 10;
+            a{
+                max-width: 100%;
+                padding: 15px 15px;
+            }
+            a:hover{
+                background: $red;
+            }
+        }
+    }
+}
+@include mobile{
+    #menu_control:checked ~ .header nav{
+        left:0;
+    }
+}

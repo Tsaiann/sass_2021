@@ -1,0 +1,63 @@
+.banner{
+    background: $black;
+    margin-bottom: 45px;
+    .banner_content{
+        padding: 40px 15px 70px 15px;
+        img{
+            max-width: 100%;
+        }
+        h2{
+            @include font_style(7rem,$white,20px);
+        }
+        p{
+            @include font_style(1.5rem,$red,20px);
+            letter-spacing: 15px;
+            text-align: center;
+        }
+        a{
+            border: 2px solid $white;
+            text-align: center;
+            width: 169px;
+            padding: 15px 50px;
+        }  
+        @include mobile{
+            img{
+                width: 80%;
+                margin: 15px auto;
+            }
+            div{
+                margin: 15px auto; 
+                a{
+                    margin: 0 auto;
+                }
+            }
+        }  
+        @include mobile_3{
+           
+            div{
+                margin: 0 auto;
+                h2{
+                    font-size: 4rem;
+                }
+                p{
+                    font-size: 1rem;
+                    letter-spacing: 7px; 
+                }
+            }
+        }
+    }
+}
+.banner_2{
+    margin-bottom: 45px;
+    img{
+        display: block;
+        max-width: 49%
+
+    }
+    @include mobile_2{
+        img{
+            max-width: 100%;
+            margin: 0 auto 10px auto;
+        }
+    }
+}
