@@ -9,10 +9,15 @@ $lightGray:#F1F2F2;
 
 
 
-
 //screen
 @mixin mobile{
-    @media screen and (max-width:1199px){
+    @media screen and (max-width:1140px){
+        @content
+    }
+}
+
+@mixin mobile_2{
+    @media screen and (max-width:550px){
         @content
     }
 }
