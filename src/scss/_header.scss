@@ -15,11 +15,13 @@
         margin-left: 10px;
     }
     ul{ 
-        a{
-            padding-bottom: 5px;
-        }
-        a:hover{
-            border-bottom: 2px solid $middleRed;
+        li{
+            position: relative;
+            :hover::after{
+                @include pseudo_1(100%, 2px, $middleRed);
+                position: absolute;
+                bottom: -10px;
+            }
         }
     }
     nav, .menu_btn{

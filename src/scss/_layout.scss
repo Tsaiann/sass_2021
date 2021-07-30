@@ -18,6 +18,27 @@
     margin-bottom: $mb;
 }
 
+$icon:('logo_fb', 'logo_twitter', 'logo_ig', 'logo_google');
+@each $contactIcon in $icon{
+    .icon_#{$contactIcon}{
+        background: url('../img/cosmetic/#{$contactIcon}.svg');
+    }
+}
+
 .container{
     @include container(1260px);
+}
+
+html {
+    height: 100%;
+    body {
+        font-family: "Microsoft JhengHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        touch-action: manipulation;
+        height: 100%;
+        a{
+            text-decoration: none;
+            color: $white;
+            display: block;
+        }
+    }
 }

@@ -8,16 +8,3 @@
 @import "_footer.scss";
 @import "_dataAttribute.scss";
 
-html {
-    height: 100%;
-    body {
-        font-family: "Microsoft JhengHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        touch-action: manipulation;
-        height: 100%;
-        a{
-            text-decoration: none;
-            color: $white;
-            display: block;
-        }
-    }
-}

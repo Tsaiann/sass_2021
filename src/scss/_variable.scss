@@ -12,19 +12,19 @@ $lightGray:#F1F2F2;
 //screen
 @mixin mobile{
     @media screen and (max-width:1140px){
-        @content
+        @content;
     }
 }
 
 @mixin mobile_2{
     @media screen and (max-width:600px){
-        @content
+        @content;
     }
 }
 
 
 @mixin mobile_3{
     @media screen and (max-width:550px){
-        @content
+        @content;
     }
 }
