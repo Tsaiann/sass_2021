@@ -1,20 +1,16 @@
-.data_row {
-    @include boxSizing();
-    border: 1px solid #ccc;
-    min-height: 60px;
-    word-break: break-all;
+.background{
+    min-width: 1280px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    img{
+        width: 100%;
+    }
 }
 
-.test {
-    width: 500px;
-    height: 300px;
-    border: 1px solid #333;
-}
-
-.xs-box {
-    display: block;
-    width: 60px;
-    height: 60px;
-    background: #333;
-    margin: 0.5rem;
+$menu:('top_menu_01','top_menu_02','top_menu_03','top_menu_04','top_menu_05');
+@each $currentMenu in $menu{
+    .#{$currentMenu}{
+        background: url('../img/pc/#{currentMenu}.png');
+    }
 }

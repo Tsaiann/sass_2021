@@ -39,7 +39,7 @@
 
     &.horizontal{
         @include flexBox(row, flex-start, flex-start);
-        //如果同時在html寫上v_center和h_center不論他們寫的順序一定都是吃到排在後面的h_center!(考試會考)
+        
         &.v_center{
             @include flexBox(row, center, flex-start);
         }
