@@ -11,6 +11,10 @@
 $menu:('top_menu_01','top_menu_02','top_menu_03','top_menu_04','top_menu_05');
 @each $currentMenu in $menu{
     .#{$currentMenu}{
-        background: url('../img/pc/#{currentMenu}.png');
+        width: 130px;
+        height: 140px;
+        background-image: url('../img/pc/#{$currentMenu}.png');
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 }

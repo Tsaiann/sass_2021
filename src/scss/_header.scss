@@ -1,8 +1,35 @@
 .header{
     .state{
-        background: url('../img/pc/user_status_bg.png');
-        max-width: 400px;
-        height: 90px;
+        width: 450px;
+        height: 70px;
+        background-image: url('../img/pc/user_status_bg.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        .photo{
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            background: #fff;
+        }   
+        .level{
+            width: 130px;
+            height: 20px;
+            background: #101B2C;
+            border-radius: 30px;
+            margin-top: 5px;
+            position: relative;
+        }
+        .level::after{
+            content:"Lv 92";
+            width: 90px;
+            height: 20px;
+            border-radius: 30px;
+            background: #F3CB04;
+            position: absolute;
+        }
+        .hidden{
+            opacity: 0;
+        }  
     }
 
 }
