@@ -33,3 +33,72 @@
     }
 
 }
+.content{
+    width: 100%;
+    margin-top: 40px;
+    .aside{
+        width: 25%;
+        height: 390px;
+        margin-left: 30px;
+        margin-top: 50px;
+        .item{
+            background-image: url('../img/pc/quest_bg.png');
+            height: 90px;
+            width: 100%;
+            margin-bottom: 10px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: relative;
+            .lock{
+                width: 15%;
+                height: 50px;
+                margin-left: 20px;
+                background-image: url('../img/pc/lock.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+    .fish{
+        width: 80%;
+    }
+}
+.footer{
+    .chat{
+        width: 26%;
+        height: 170px;
+        background: #071824;
+        border-right: 1px solid #03C4D9;
+        border-top: 1px solid #03C4D9;
+        .box1{
+            div{
+                background: #F2B500;
+                width: 50px;
+                height: 20px;
+                padding: 8px;
+                border-radius: 5px;
+            }
+        }
+        .box2{
+            div{
+                background: blue;
+                width: 50px;
+                padding: 8px;
+                border-radius: 5px;
+            }
+        }
+        .box3{
+            div{
+                background: red;
+                width: 50px;
+                padding: 8px;
+                border-radius: 5px;
+            }
+        }
+    }
+    .footer_menu{
+        width: 74%;
+        height: 55px;
+        background: #07222D;
+    }
+}
