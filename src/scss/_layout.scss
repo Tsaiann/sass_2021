@@ -27,6 +27,7 @@ $menu:('top_menu_01','top_menu_02','top_menu_03','top_menu_04','top_menu_05');
         background-image: url('../img/pc/#{$currentMenu}.png');
         background-repeat: no-repeat;
         background-size: contain;
+        position: relative;
     }
 }
 
