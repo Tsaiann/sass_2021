@@ -1,6 +1,6 @@
 .header{
     .state{
-        width: 300px;
+        width: 45%;
         height: 80px;
         background-image: url('../img/pc/state_bg.png');
         background-size: 100%;
@@ -93,20 +93,19 @@
     margin-top: 30px;
     .aside{
         width: 25%;
-        height: 390px;
         margin-left: 30px;
         margin-top: 60px;
         .item{
             color: gray;
             background-image: url('../img/pc/quest_bg.png');
-            margin-bottom: 8px;
+            margin-bottom: 7px;
             background-size: 80% 100%;
             background-repeat: no-repeat;
             position: relative;
             max-width: 100%;
             .bg_blur{
                 position: absolute;
-                width: 279px;
+                width: 75%;
                 height: 50px;
                 background: yellow;
                 z-index: -1;
@@ -142,36 +141,93 @@
     }
 }
 .footer{
-    
+    position: absolute;
+    bottom: -130px;
     .chat{
-        width: 26%;
+        width: 27%;
+        height: 170px;
         background: #071824;
         border-right: 1px solid #03C4D9;
         border-top: 1px solid #03C4D9;
-        .box1{
-            div{
-                background: #F2B500;
-                width: 50px;
-                height: 20px;
-                padding: 8px;
-                border-radius: 5px;
+        overflow: scroll;
+        overflow-x: hidden;
+        padding-left: 10px;
+        position: relative;
+        .chat_content{
+            .box1{
+                margin-top: 10px;
+                flex-shrink: 0;
+                div{
+                    background: #F2B500;
+                    width: 60px;
+                    height: 10px;
+                    padding: 8px;
+                    border-radius: 5px;
+                    white-space: nowrap;
+                    font-size: 12px;
+                    text-align: center;
+                }
+                p{
+                    height: 30px;
+                    line-height: 1.5;
+                    margin-left: 10px;
+                    font-size: 13px;
+                    padding-top: 2px;
+                    color: #79A820;
+                }
+            }
+            .box2{
+                margin-top: 15px;
+                flex-shrink: 0;
+                div{
+                    background: blue;
+                    width: 35px;
+                    height: 10px;
+                    padding: 8px;
+                    border-radius: 5px;
+                    white-space: nowrap;
+                    font-size: 12px;
+                    text-align: center;
+                }
+                p{
+                    height: 30px;
+                    line-height: 1.5;
+                    margin-left: 10px;
+                    font-size: 13px;
+                    padding-top: 2px;
+                    color: #218FAA;
+                }
+            }
+            .box3{
+                margin-top: 15px;
+                flex-shrink: 0;
+                div{
+                    background: red;
+                    width: 33px;
+                    height: 10px;
+                    padding: 8px;
+                    border-radius: 5px;
+                    white-space: nowrap;
+                    font-size: 12px;
+                    text-align: center;
+                }
+                p{
+                    height: 30px;
+                    line-height: 2;
+                    margin-left: 10px;
+                    font-size: 13px;
+                }
             }
         }
-        .box2{
-            div{
-                background: blue;
-                width: 50px;
-                padding: 8px;
-                border-radius: 5px;
-            }
-        }
-        .box3{
-            div{
-                background: red;
-                width: 50px;
-                padding: 8px;
-                border-radius: 5px;
-            }
+        input{
+            background: #032E39;
+            width: 90%;
+            color: #fff;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 0;
+            outline: none;
+            border:none
         }
     }
     .footer_menu{
