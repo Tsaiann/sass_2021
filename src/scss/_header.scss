@@ -1,238 +1,65 @@
+.container{
+    min-width: 1280px;
+    height: 100vh;
+    background: url('../img/pc/bg.jpg');
+    background-size: cover;
+}
 .header{
+    width: 100%;
     .state{
-        width: 45%;
-        height: 80px;
-        background-image: url('../img/pc/state_bg.png');
-        background-size: 100%;
-        background-repeat: no-repeat;
-        padding-top: 10px;
+        width: 50%;
+        height: 10vh;
+        background: url('../img/pc/user_status_bg.png');
+        background-size: 100% 100%;
+        padding: 0 10px;
         .photo{
-            width: 40px;
-            height: 40px;
+            width: 14%;
+            height: 6vh;
             border-radius: 100%;
-            background-image:url('../img/pc/chipmunk.jpg');
-            background-size: contain;
-            background-repeat: no-repeat;
-        }   
-        img{
-            padding-top: 6px;
-        }
-        .level{
-            width: 130px;
-            height: 20px;
-            background: #101B2C;
-            border-radius: 30px;
-            margin-top: 5px;
-            position: relative;
-        }
-        .level::after{
-            content:"Lv 92";
-            width: 80px;
-            height: 20px;
-            border-radius: 30px;
-            background: #F3CB04;
-            position: absolute;
-            padding-left: 10px;
+            background:url('../img/pc/chipmunk.jpg');
+            background-size: cover;
+        } 
+        .user{
+            width: 40%;
+            div{
+                width: 100%;
+                height: 3vh;
+                background: #101B2C;
+                border-radius: 30px;
+                margin-top: 10px;
+                position: relative;
+            }
+            div::after{
+                content:"Lv 92";
+                width: 60%;
+                height: 3vh;
+                border-radius: 30px;
+                background: #F3CB04;
+                position: absolute;
+                padding-left: 10px;
+            }
         }
         .hidden{
             opacity: 0;
-        }  
-    }
-    .state::after{
-        content: "x 168";
-        position: absolute;
-        top: 23px;
-        right: 25px;
-        font-size: 13px;
-        font-weight: bolder;
+        }
     }
     .money{
         margin-top: 20px;
         margin-left: 50px;
-        min-width: 25%;
-        height: 30px;
+        min-width: 20%;
+        height: 4vh;
         background-color: #003C69;
-        border-radius: 20px;
+        border-radius: 10px;
         position: relative;
         img{
             position: absolute;
-            top: -5px;
-            left: -5px;
+            top:-10%;
         }
         p{
             text-align: right;
             font-size: 20px;
-            padding-top: 5px;
+            padding-top: 7px;
             padding-right: 15px;
         }
-    }
-    .top_menu_03, .top_menu_04 {
-        img{
-            position: absolute;
-            width: 40px;
-            top: 90px;
-            right: 20px;
-        }   
-    }
-    .top_menu_02, .top_menu_05{
-        div{
-            width: 20px;
-            height: 20px;
-            border-radius: 20px;
-            background: red;
-            position: absolute;
-            top: 90px;
-            right: 20px;
-            text-align: center;
-            font-size: 17px;
-        }
-    }
-}
-.content{
-    width: 100%;
-    margin-top: 30px;
-    .aside{
-        width: 25%;
-        margin-left: 30px;
-        margin-top: 60px;
-        .item{
-            color: gray;
-            background-image: url('../img/pc/quest_bg.png');
-            margin-bottom: 7px;
-            background-size: 80% 100%;
-            background-repeat: no-repeat;
-            position: relative;
-            max-width: 100%;
-            .bg_blur{
-                position: absolute;
-                width: 75%;
-                height: 50px;
-                background: yellow;
-                z-index: -1;
-                margin-left: 4px;
-            }
-            .lock{
-                width: 15%;
-                height: 40px;
-                margin-left: 20px;
-                background-image: url('../img/pc/lock.png');
-                background-repeat: no-repeat;
-                background-size: contain;
-            }
-        }
-        .item:active{
-            color: yellow;
-            .bg_blur{
-                box-shadow: 2px 2px 30px yellow;
-            }
-            .lock{
-                background-image: url('../img/pc/get_reward_btn.png');
-                background-repeat: no-repeat;
-                background-size: contain;
-                width: 15%;
-                height: 40px;
-                margin-left: 20px;
-                margin-top: 15px;
-            }
-        }
-    }
-    .fish{
-        width: 80%;
-    }
-}
-.footer{
-    position: absolute;
-    bottom: -130px;
-    .chat{
-        width: 27%;
-        height: 170px;
-        background: #071824;
-        border-right: 1px solid #03C4D9;
-        border-top: 1px solid #03C4D9;
-        overflow: scroll;
-        overflow-x: hidden;
-        padding-left: 10px;
-        position: relative;
-        .chat_content{
-            .box1{
-                margin-top: 10px;
-                flex-shrink: 0;
-                div{
-                    background: #F2B500;
-                    width: 60px;
-                    height: 10px;
-                    padding: 8px;
-                    border-radius: 5px;
-                    white-space: nowrap;
-                    font-size: 12px;
-                    text-align: center;
-                }
-                p{
-                    height: 30px;
-                    line-height: 1.5;
-                    margin-left: 10px;
-                    font-size: 13px;
-                    padding-top: 2px;
-                    color: #79A820;
-                }
-            }
-            .box2{
-                margin-top: 15px;
-                flex-shrink: 0;
-                div{
-                    background: blue;
-                    width: 35px;
-                    height: 10px;
-                    padding: 8px;
-                    border-radius: 5px;
-                    white-space: nowrap;
-                    font-size: 12px;
-                    text-align: center;
-                }
-                p{
-                    height: 30px;
-                    line-height: 1.5;
-                    margin-left: 10px;
-                    font-size: 13px;
-                    padding-top: 2px;
-                    color: #218FAA;
-                }
-            }
-            .box3{
-                margin-top: 15px;
-                flex-shrink: 0;
-                div{
-                    background: red;
-                    width: 33px;
-                    height: 10px;
-                    padding: 8px;
-                    border-radius: 5px;
-                    white-space: nowrap;
-                    font-size: 12px;
-                    text-align: center;
-                }
-                p{
-                    height: 30px;
-                    line-height: 2;
-                    margin-left: 10px;
-                    font-size: 13px;
-                }
-            }
-        }
-        input{
-            background: #032E39;
-            width: 90%;
-            color: #fff;
-            border-radius: 5px;
-            position: absolute;
-            bottom: 0;
-            outline: none;
-            border:none
-        }
-    }
-    .footer_menu{
-        width: 74%;
-        height: 55px;
-        background: #07222D;
     }
 }

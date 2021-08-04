@@ -1,66 +1,10 @@
-.background{
-    min-width: 1280px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    img{
-        width: 100%;
-    }
-}
-
-.daily_gift{
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 25%;
-    img{
-        max-width: 100%;
-    }
-}
-
 $menu:('top_menu_01','top_menu_02','top_menu_03','top_menu_04','top_menu_05');
 @each $currentMenu in $menu{
     .#{$currentMenu}{
-        width: 130px;
-        height: 140px;
-        background-image: url('../img/pc/#{$currentMenu}.png');
-        background-repeat: no-repeat;
+        width: 18%;
+        height: 20vh;
+        background: url('../img/pc/#{$currentMenu}.png') no-repeat;
         background-size: contain;
         position: relative;
-    }
-}
-
-$game: ('game01', 'game02', 'game03');
-@each $currentGame in $game{
-    .#{$currentGame}{
-        width: 35%;
-        height: 500px;
-        background-image: url('../img/pc/#{$currentGame}.png');
-        background-repeat: no-repeat;
-        background-size: 100%;
-    }
-}
-
-$fish: ('fish_1', 'fish_2', 'fish_3', 'fish_4');
-@each $currentFish in $fish{
-    .#{$currentFish}{
-        width: 32%;
-        height: 80px;
-        background-image: url('../img/pc/#{$currentFish}.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-}
-
-$footerMenu: ('bottom_menu_01', 'bottom_menu_02', 'bottom_menu_03', 'bottom_menu_04','bottom_menu_05','bottom_menu_06');
-@each $currentFooterMenu in $footerMenu{
-    .#{$currentFooterMenu}{
-        width: 12%;
-        height: 50px;
-        background-image: url('../img/pc/#{$currentFooterMenu}.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-        margin-left: 3px;
     }
 }
