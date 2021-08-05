@@ -1,3 +1,13 @@
+html {
+    height: 100%;
+    body {
+        font-family: "Microsoft JhengHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        touch-action: manipulation;
+        color: #fff;
+        font-size: 20px;
+    }
+}
+
 $menu:('top_menu_01','top_menu_02','top_menu_03','top_menu_04','top_menu_05');
 @each $currentMenu in $menu{
     .#{$currentMenu}{
@@ -6,5 +16,35 @@ $menu:('top_menu_01','top_menu_02','top_menu_03','top_menu_04','top_menu_05');
         background: url('../img/pc/#{$currentMenu}.png') no-repeat;
         background-size: contain;
         position: relative;
+    }
+}
+
+$fish: ('fish_1', 'fish_2', 'fish_3', 'fish_4');
+@each $currentFish in $fish{
+    .#{$currentFish}{
+        width: 22%;
+        height: 10vh;
+        background: url('../img/pc/#{$currentFish}.png') no-repeat;
+        background-size: contain;
+    }
+}
+
+$game: ('game01', 'game02', 'game03');
+@each $currentGame in $game{
+    .#{$currentGame}{
+        width: 35%;
+        height:55vh;
+        background: url('../img/pc/#{$currentGame}.png') no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+$footerMenu: ('bottom_menu_01', 'bottom_menu_02', 'bottom_menu_03', 'bottom_menu_04','bottom_menu_05','bottom_menu_06');
+@each $currentFooterMenu in $footerMenu{
+    .#{$currentFooterMenu}{
+        width: 13%;
+        height: 6vh;
+        background: url('../img/pc/#{$currentFooterMenu}.png') no-repeat;
+        background-size: contain;
     }
 }

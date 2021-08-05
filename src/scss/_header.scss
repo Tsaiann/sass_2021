@@ -3,24 +3,27 @@
     height: 100vh;
     background: url('../img/pc/bg.jpg');
     background-size: cover;
+    z-index: -1;
 }
 .header{
     width: 100%;
     .state{
-        width: 50%;
+        width: 45%;
         height: 10vh;
         background: url('../img/pc/user_status_bg.png');
         background-size: 100% 100%;
         padding: 0 10px;
         .photo{
-            width: 14%;
+            width: 15%;
             height: 6vh;
             border-radius: 100%;
             background:url('../img/pc/chipmunk.jpg');
             background-size: cover;
+            margin-right: 5%;
         } 
         .user{
             width: 40%;
+            margin-right: 5%;
             div{
                 width: 100%;
                 height: 3vh;
@@ -33,6 +36,7 @@
                 content:"Lv 92";
                 width: 60%;
                 height: 3vh;
+                line-height: 3vh;
                 border-radius: 30px;
                 background: #F3CB04;
                 position: absolute;
@@ -42,24 +46,58 @@
         .hidden{
             opacity: 0;
         }
+        .star{
+            width: 12%;
+            position: relative;
+            p{
+                margin-left: 15%;
+            }
+        }
     }
     .money{
-        margin-top: 20px;
+        margin-top: 30px;
         margin-left: 50px;
-        min-width: 20%;
+        min-width: 25%;
         height: 4vh;
         background-color: #003C69;
-        border-radius: 10px;
+        border-radius: 20px;
         position: relative;
         img{
+            width: 29%;
             position: absolute;
-            top:-10%;
+            top:-22%;
+            left: -5%;
         }
-        p{
-            text-align: right;
-            font-size: 20px;
-            padding-top: 7px;
-            padding-right: 15px;
+        div{
+            height: 4vh;
+            p{
+                padding-right: 10%;
+                letter-spacing: 3px;
+            }
+        }
+
+    }
+    .top_menu{
+        .top_menu_03, .top_menu_04{
+            position: relative;
+            img{
+                position: absolute;
+                width: 35%;
+                bottom: 30%;
+                right: 0;
+            }
+        }
+        .top_menu_02, .top_menu_05{
+            position: relative;
+            div{
+                width: 20%;
+                height: 16%;
+                border-radius: 100%;
+                background: red;
+                position: absolute;
+                bottom: 28%;
+                right: 10%;
+            }
         }
     }
 }
