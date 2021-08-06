@@ -40,6 +40,7 @@
             font-size: 15px;
             .chat_content{
                 overflow: scroll;
+                overflow-x:hidden;
                 height: 13vh;
                 .box{
                     width: 100%;
