@@ -1,44 +1,34 @@
 .container{
     min-width: 1280px;
     height: 100vh;
-    background: url('../img/pc/bg.jpg');
-    background-size: cover;
+    @include background(url('../img/pc/bg.jpg'),cover,0);
     z-index: -1;
 }
 .header{
     width: 100%;
     .state{
-        width: 45%;
-        height: 10vh;
-        background: url('../img/pc/user_status_bg.png');
-        background-size: 100% 100%;
+        @include size(45%,10vh);
+        @include background(url('../img/pc/user_status_bg.png'),100% 100%,0);
         padding: 0 10px;
         .photo{
-            width: 15%;
-            height: 6vh;
-            border-radius: 100%;
-            background:url('../img/pc/chipmunk.jpg');
-            background-size: cover;
+            @include size(15%,6vh);
+            @include background(url('../img/pc/chipmunk.jpg'),cover,100%);
             margin-right: 5%;
         } 
         .user{
             width: 40%;
             margin-right: 5%;
             div{
-                width: 100%;
-                height: 3vh;
-                background: #101B2C;
-                border-radius: 30px;
+                @include size(100%,3vh);
+                @include background($darkBlue,auto,30px);
                 margin-top: 10px;
                 position: relative;
             }
             div::after{
                 content:"Lv 92";
-                width: 60%;
-                height: 3vh;
+                @include size(60%,3vh);
+                @include background($yellow,auto,30px);
                 line-height: 3vh;
-                border-radius: 30px;
-                background: #F3CB04;
                 position: absolute;
                 padding-left: 10px;
             }
@@ -55,16 +45,15 @@
         }
     }
     .money{
-        margin-top: 30px;
-        margin-left: 50px;
+        margin: 30px 0 0 50px;
         min-width: 25%;
         height: 4vh;
-        background-color: #003C69;
+        background: -webkit-linear-gradient(bottom,$middleBlue 30%, $lightBlue 100%);
+        background-clip: text;
         border-radius: 20px;
         position: relative;
         img{
-            width: 29%;
-            height: 6vh;
+            @include size(29%,6vh);
             position: absolute;
             top:-22%;
             left: -5%;
@@ -82,22 +71,14 @@
         .top_menu_03, .top_menu_04{
             position: relative;
             img{
-                position: absolute;
-                width: 35%;
-                bottom: 30%;
-                right: 0;
+                @include topMenuMark(35%,auto,30%,0);
             }
         }
         .top_menu_02, .top_menu_05{
             position: relative;
             div{
-                width: 20%;
-                height: 16%;
-                border-radius: 100%;
-                background: red;
-                position: absolute;
-                bottom: 28%;
-                right: 10%;
+                @include topMenuMark(20%,16%,28%,10%);
+                @include background($mark,auto,100%);
             }
         }
     }
