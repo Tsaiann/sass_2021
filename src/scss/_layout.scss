@@ -33,8 +33,9 @@ html {
             background: map-get($chatBoxColor,box#{$i});
             width: 6%;
             padding: 2%;
-            border-radius: 10px;
+            border-radius: 5px;
             margin-right: 3%;
+            font-size: 12px;
         }
         p{
             line-height: 1.5;
