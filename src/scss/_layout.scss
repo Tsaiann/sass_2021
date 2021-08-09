@@ -1,13 +1,3 @@
-html {
-    height: 100%;
-    body {
-        font-family: "Microsoft JhengHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        touch-action: manipulation;
-        color: $white;
-        font-size: 20px;
-    }
-}
-
 @mixin size($width,$height){
     width:$width;
     height:$height;
@@ -26,6 +16,7 @@ html {
     background-size: $backgroundSize;
     border-radius: $borderRadius;
 }
+/*
 @for $i from 1 through 3{
     .box#{$i}{
         div{
@@ -43,11 +34,12 @@ html {
         }
         
     }
-}
+}*/
+
 $menu:('top_menu_01','top_menu_02','top_menu_03','top_menu_04','top_menu_05');
 @each $currentMenu in $menu{
     .#{$currentMenu}{
-        @include size(18%,20vh);
+        @include size(150px,180px);
         @include background(url('../img/pc/#{$currentMenu}.png') no-repeat, contain,0 );
         position: relative;
     }
@@ -65,15 +57,24 @@ $game: ('game01', 'game02', 'game03');
 @each $currentGame in $game{
     .#{$currentGame}{
         @include size(35%,55vh);
-        @include background(url('../img/pc/#{$currentGame}.png') no-repeat, 100% 100%,0);
+        @include background(url('../img/pc/#{$currentGame}.png') no-repeat, contain,0);
     }
 }
 
 $footerMenu: ('bottom_menu_01', 'bottom_menu_02', 'bottom_menu_03', 'bottom_menu_04','bottom_menu_05','bottom_menu_06');
 @each $currentFooterMenu in $footerMenu{
     .#{$currentFooterMenu}{
-        @include size(13%,6vh);
+        @include size(16vh,6vh);
         @include background(url('../img/pc/#{$currentFooterMenu}.png') no-repeat, contain, 0);
     }
 }
 
+html {
+    height: 100%;
+    body {
+        font-family: "Microsoft JhengHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        touch-action: manipulation;
+        color: $white;
+        font-size: 20px;
+    }
+}

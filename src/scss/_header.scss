@@ -1,73 +1,78 @@
 .container{
+    @include boxSizing();
+    @include size(100%,100%);
     min-width: 1280px;
-    height: 100vh;
-    @include background(url('../img/pc/bg.jpg'),cover,0);
-    z-index: -1;
+    background: url('../img/pc/bg.jpg') no-repeat;
+    background-size: cover;
 }
 .header{
     width: 100%;
+    height: 180px;
     .state{
-        @include size(45%,10vh);
-        @include background(url('../img/pc/user_status_bg.png'),100% 100%,0);
+        @include size(450px,95px);
+        @include background(url('../img/pc/user_status_bg.png') no-repeat,contain,0);
         padding: 0 10px;
         .photo{
-            @include size(15%,6vh);
-            @include background(url('../img/pc/chipmunk.jpg'),cover,100%);
-            margin-right: 5%;
-        } 
+            @include size(50px,50px);
+            @include background(url('../img/pc/chipmunk.jpg'),contain,100%);
+            margin-right: 15px;
+        }
         .user{
-            width: 40%;
-            margin-right: 5%;
+            margin-right: 15px;
             div{
-                @include size(100%,3vh);
+                @include size(170px,25px);
                 @include background($darkBlue,auto,30px);
                 margin-top: 10px;
                 position: relative;
-            }
-            div::after{
-                content:"Lv 92";
-                @include size(60%,3vh);
-                @include background($yellow,auto,30px);
-                line-height: 3vh;
-                position: absolute;
-                padding-left: 10px;
+                &::after{
+                    content:"Lv 92";
+                    @include size(120px,25px);
+                    @include background($yellow,auto,25px);
+                    position: absolute;
+                    padding-left: 10px;
+                    -webkit-text-stroke: 1px $lightBlue;
+                    color: #fff;
+                }
             }
         }
         .hidden{
             opacity: 0;
         }
         .star{
-            width: 12%;
+            width: 35px;
             position: relative;
             p{
-                margin-left: 15%;
+                margin-left: 10px;
             }
         }
     }
     .money{
-        margin: 30px 0 0 50px;
+        margin: 30px 0 0 10px;
         min-width: 25%;
-        height: 4vh;
+        height: 35px;
         background: -webkit-linear-gradient(bottom,$middleBlue 30%, $lightBlue 100%);
         background-clip: text;
         border-radius: 20px;
+        border: 1px solid skyblue;
         position: relative;
         img{
-            @include size(29%,6vh);
+            width: 50px;
             position: absolute;
             top:-22%;
             left: -5%;
         }
         div{
-            height: 4vh;
+            height: 30px;
             p{
-                padding-right: 10%;
+                padding-right: 10px;
                 letter-spacing: 3px;
             }
         }
 
     }
     .top_menu{
+        width: 100%;
+        margin-right: 20px;
         .top_menu_03, .top_menu_04{
             position: relative;
             img{
