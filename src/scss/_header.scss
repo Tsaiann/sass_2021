@@ -81,6 +81,7 @@
         .top_menu_02, .top_menu_05{
             position: relative;
             div{
+                font-size: 16px;
                 @include topMenuMark(15%,15%,25%,15%);
                 @include background($mark,contain,100%);
             }

@@ -1,7 +1,7 @@
 .main{
     @include size(100%,100%);
     .aside{
-        @include size(30%,100%);
+        @include size(30%,640px);
         position: relative;
         img{
             width: 90%;
@@ -35,30 +35,60 @@
             @include size(100%,170px);
             background: $chatbackground;
             border-top: 1px solid $skyBlue;
+            border-right: 1px solid $skyBlue;
             padding: 2%;
             font-size: 15px;
+            position: relative;
+            .icon_arrow{
+                @include size(20%, 20%);
+                @include background(url('../img/pc/icon_arrow_up.svg') no-repeat,contain,0);
+                position: absolute;
+                z-index: 10;
+                right: -10%;
+            }
+            .icon_config{
+                @include size(20%, 20%);
+                @include background(url('../img/pc/icon_config.svg') no-repeat,contain,0);
+                position: absolute;
+                z-index: 10;
+                right: -10%;
+                bottom: 3%;
+            }
             .chat_content{
                 overflow: scroll;
                 overflow-x:hidden;
-                height: 13vh;
+                width: 90%;
+                height: 80%;
+                &::-webkit-scrollbar{
+                    background: $chatbackground;
+                }
                 .box{
                     width: 100%;
                     margin-bottom: 1%;
                 }
             }
             input{
-                @include size(100%,3vh);
+                @include size(89%,20%);
                 @include background($middleBlue,auto,5px);
                 color: #fff;
                 border:none;
             }
-            .triangle{
-                border-left: 18px solid $lightBlue;
-                border-top: 10px solid transparent;
-                border-bottom: 10px solid transparent;
+            .chatLog{
                 position: absolute;
-                bottom: 8%;
-                right: 3%;
+                top:-1%;
+                right:-4%;
+                div{
+                    width: 12px;
+                    height: 12px;
+                    background: #05C3DA;
+                    margin-bottom: 5px;
+                }
+                p{
+                    font-size: 7px;
+                    writing-mode: vertical-lr;
+                    font-weight: bolder;
+                    color: #05C3DA;
+                }
             }
         }
     }
@@ -72,6 +102,22 @@
         .bottom_menu{
             height: 10%;
             background: $middleBlue;
+        }
+        .menu_logo{
+            position: absolute;
+            top: -30%;
+            right: 1%;
+            div{
+                width: 12px;
+                height: 12px;
+                background: #05C3DA;
+                margin-right: 5px;
+            }
+            p{
+                font-size: 7px;
+                font-weight: bolder;
+                color: #05C3DA;
+            }
         }
     }
 }
