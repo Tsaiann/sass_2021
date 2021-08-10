@@ -1,41 +1,38 @@
 .main{
-    width: 100%;
-    height: 100%;
+    @include size(100%,100%);
     .aside{
-        width: 30%;
+        @include size(30%,100%);
         position: relative;
         img{
-            width: 93%;
+            width: 90%;
             position: absolute;
-            top:-14%;
+            top:-12%;
         }
         .item{
             width: 85%;
             margin: 19% 0 0 6%;
             .item_content{
-                height: 10vh;
+                @include size(90%,80px);
                 @include background(url('../img/pc/quest_bg.png') no-repeat, 90% 100%, 0);
                 color: $gray;
                 margin-bottom: 3%;
                 position: relative;
                 .lock{
-                    width: 5vh;
-                    height: 5vh;
+                    @include size(13%,50%);
                     @include background(url('../img/pc/lock.png') no-repeat,contain,0);
-                    margin-left: 7%;
+                    margin-left: 5%;
                 }
-                &:active{
-                    color: $yellow;
+                &:hover{
+                    color: yellow;
                     .lock{
-                    @include size(15%,3vh);
-                    @include background(url('../img/pc/get_reward_btn.png') no-repeat, contain,0);
+                        @include size(15%,30%);
+                        @include background(url('../img/pc/get_reward_btn.png') no-repeat, contain,0);
                     }
                 }
             }
         }
         .chat{
-            width: 100%;
-            height: 18vh;
+            @include size(100%,170px);
             background: $chatbackground;
             border-top: 1px solid $skyBlue;
             padding: 2%;
@@ -66,14 +63,14 @@
         }
     }
     .content{
-        width: 70%;
-        height: 100%;
+        @include size(70%,640px);
         .game{
             width: 100%;
+            height: 80%;
             margin-top: 2%;
         }
         .bottom_menu{
-            height: 8vh;
+            height: 10%;
             background: $middleBlue;
         }
     }

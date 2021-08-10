@@ -1,37 +1,37 @@
 .container{
-    @include boxSizing();
-    @include size(100%,100%);
     min-width: 1280px;
-    background: url('../img/pc/bg.jpg') no-repeat;
-    background-size: cover;
+    min-height: 721px;
+    width: 100%;
+    height: 100%;
 }
 .header{
     width: 100%;
-    height: 180px;
+    height: 160px;
     .state{
-        @include size(450px,95px);
+        @include size(400px,100px);
         @include background(url('../img/pc/user_status_bg.png') no-repeat,contain,0);
-        padding: 0 10px;
+        padding: 5px 14px;
         .photo{
             @include size(50px,50px);
-            @include background(url('../img/pc/chipmunk.jpg'),contain,100%);
-            margin-right: 15px;
-        }
+            @include background(url('../img/pc/chipmunk.jpg'),cover,100%);
+            margin-right: 5%;
+        } 
         .user{
-            margin-right: 15px;
+            width: 40%;
+            margin-right: 5%;
             div{
-                @include size(170px,25px);
+                @include size(150px,25px);
                 @include background($darkBlue,auto,30px);
                 margin-top: 10px;
                 position: relative;
                 &::after{
                     content:"Lv 92";
-                    @include size(120px,25px);
-                    @include background($yellow,auto,25px);
+                    @include size(100px,25px);
+                    @include background($yellow,auto,30px);
+                    line-height: 1.1;
+                    -webkit-text-stroke: 1px #2C8FE0;
                     position: absolute;
                     padding-left: 10px;
-                    -webkit-text-stroke: 1px $lightBlue;
-                    color: #fff;
                 }
             }
         }
@@ -39,51 +39,50 @@
             opacity: 0;
         }
         .star{
-            width: 35px;
+            width: 12%;
             position: relative;
             p{
-                margin-left: 10px;
+                margin-left: 15%;
             }
         }
     }
     .money{
-        margin: 30px 0 0 10px;
-        min-width: 25%;
+        margin: 30px 0 0 50px;
+        min-width: 160px;
         height: 35px;
         background: -webkit-linear-gradient(bottom,$middleBlue 30%, $lightBlue 100%);
         background-clip: text;
         border-radius: 20px;
-        border: 1px solid skyblue;
         position: relative;
         img{
-            width: 50px;
+            height: 50px;
             position: absolute;
             top:-22%;
-            left: -5%;
+            left: -18%;
         }
         div{
-            height: 30px;
+            height: 35px;
             p{
-                padding-right: 10px;
+                padding-right: 10%;
                 letter-spacing: 3px;
             }
         }
 
     }
     .top_menu{
-        width: 100%;
-        margin-right: 20px;
+        height: 100%;
+        max-width: 700px;
         .top_menu_03, .top_menu_04{
             position: relative;
             img{
-                @include topMenuMark(35%,auto,30%,0);
+                @include topMenuMark(30%,auto,25%,10%);
             }
         }
         .top_menu_02, .top_menu_05{
             position: relative;
             div{
-                @include topMenuMark(20%,16%,28%,10%);
-                @include background($mark,auto,100%);
+                @include topMenuMark(15%,15%,25%,15%);
+                @include background($mark,contain,100%);
             }
         }
     }
