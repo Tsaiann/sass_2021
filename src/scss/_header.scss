@@ -91,6 +91,9 @@
                 font-size: 16px;
                 @include topMenuMark(15%,15%,25%,15%);
                 @include background($mark,contain,100%);
+                p{
+                    font-weight: bolder;
+                }
             }
         }
     }
