@@ -17,10 +17,10 @@
     border-radius: $borderRadius;
 }
 @for $i from 1 through 3{
-    .box#{$i}{
+    .chat_box#{$i}{
         div{
             white-space: nowrap;
-            background: map-get($chatBoxColor,box#{$i});
+            background: map-get($chatBoxColor,chatBox#{$i});
             width: 8%;
             padding: 2%;
             border-radius: 5px;
@@ -29,7 +29,7 @@
         }
         p{
             line-height: 1.5;
-            color: map-get($chatBoxTextColor,box#{$i});
+            color: map-get($chatBoxTextColor,chatBox#{$i});
         }
         
     }

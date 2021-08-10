@@ -36,10 +36,11 @@
                     content:"Lv 92";
                     @include size(100px,25px);
                     @include background($yellow,auto,30px);
-                    line-height: 1.1;
+                    line-height: 1.2;
                     -webkit-text-stroke: 1px #2C8FE0;
                     position: absolute;
                     padding-left: 10px;
+                    font-weight: bolder;
                 }
             }
         }

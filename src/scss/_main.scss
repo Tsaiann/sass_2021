@@ -17,15 +17,26 @@
                 color: $gray;
                 margin-bottom: 3%;
                 position: relative;
+                .item_content_blur{
+                    width: 88%;
+                    height: 47px;
+                    background: yellow;
+                    position: absolute;
+                    z-index: -1;
+                    margin-left: 5px;
+                }
                 .lock{
-                    @include size(13%,50%);
+                    @include size(50px,40px);
                     @include background(url('../img/pc/lock.png') no-repeat,contain,0);
                     margin-left: 5%;
                 }
                 &:hover{
                     color: yellow;
+                    .item_content_blur{
+                        box-shadow: 1px 1px 30px yellow;
+                    }
                     .lock{
-                        @include size(15%,30%);
+                        @include size(50px,28px);
                         @include background(url('../img/pc/get_reward_btn.png') no-repeat, contain,0);
                     }
                 }
@@ -62,7 +73,7 @@
                 &::-webkit-scrollbar{
                     background: $chatbackground;
                 }
-                .box{
+                .chat_box{
                     width: 100%;
                     margin-bottom: 1%;
                 }
