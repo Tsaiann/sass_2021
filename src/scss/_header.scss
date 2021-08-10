@@ -10,7 +10,15 @@
     .state{
         @include size(400px,100px);
         @include background(url('../img/pc/user_status_bg.png') no-repeat,contain,0);
-        padding: 5px 14px;
+        padding: 0 14px 5px 14px;
+        position: relative;
+        .state_bling{
+            @include size(400px,90px);
+            @include background(url('../img/pc/user_status_bling.png') no-repeat,contain,0);
+            position: absolute;
+            bottom: -40%;
+            left: -9%;
+        }
         .photo{
             @include size(50px,50px);
             @include background(url('../img/pc/chipmunk.jpg'),cover,100%);
