@@ -68,6 +68,9 @@ $game: ('game01', 'game02', 'game03');
         width: 500px;
         height: 500px;
         @include background(url('../img/pc/#{$currentGame}.png') no-repeat, 100%,0);
+        &:hover{
+            opacity: 0.9;
+        }
     }
 }
 
