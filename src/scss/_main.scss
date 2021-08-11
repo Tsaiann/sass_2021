@@ -1,18 +1,22 @@
 .main{
-    @include size(100%,100%);
+    @include size(100%,80%);
     .aside{
-        @include size(30%,640px);
+        width: 30%;
+        height: 80vh;
         position: relative;
         img{
             width: 90%;
+            min-width: 400px;
             position: absolute;
-            top:-12%;
+            top:-80px;
         }
         .item{
-            width: 85%;
+            width: 90%;
+            min-width: 400px;
             margin: 19% 0 0 6%;
             .item_content{
-                @include size(90%,80px);
+                width: 90%;
+                height: 80px;
                 @include background(url('../img/pc/quest_bg.png') no-repeat, 90% 100%, 0);
                 color: $gray;
                 margin-bottom: 3%;
@@ -42,20 +46,21 @@
             }
         }
         .chat{
-            @include size(100%,170px);
+            width: 100%;
+            min-height: 120px;
             background: $chatbackground;
-            opacity: .9;
+            opacity: .8;
             border-top: 1px solid $skyBlue;
             border-right: 1px solid $skyBlue;
             padding: 2%;
             font-size: 16px;
             position: relative;
             .icon_arrow{
-                right: -10%;
+                right: 2%;
             }
             .icon_config{
-                right: -10%;
-                bottom: 3%;
+                right: 2%;
+                bottom: 5%;
             }
             .chat_content{
                 @include size(90%,80%);
@@ -71,7 +76,7 @@
                 }
             }
             input{
-                @include size(89%,19%);
+                @include size(89%,28px);
                 @include background($middleBlue,auto,5px);
                 color: #fff;
                 border:none;
@@ -103,13 +108,14 @@
         }
     }
     .content{
-        @include size(70%,640px);
+        @include boxSizing;
+        width: 70%;
+        height: 80vh;
         .game{
-            @include size(100%,80%);
-            margin-top: 2%;
+            width: 100%; 
         }
         .bottom_menu{
-            height: 10%;
+            height: 60px;
             background: $middleBlue;
         }
         .menu_logo{

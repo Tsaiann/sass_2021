@@ -1,12 +1,13 @@
 .container{
     min-width: 1280px;
     min-height: 721px;
-    @include size(100%,100%);
 }
 .header{
-    @include size(100%, 160px);
+    width: 100%;
+    min-height: 160px;
     .state{
-        @include size(400px,100px);
+        width: 400px;
+        height: 100px;
         @include background(url('../img/pc/user_status_bg.png') no-repeat,contain,0);
         padding: 0 14px 5px 14px;
         position: relative;
@@ -78,7 +79,7 @@
     }
     .top_menu{
         height: 100%;
-        max-width: 700px;
+        width: 70%;
         .top_menu_03, .top_menu_04{
             position: relative;
             img{

@@ -19,7 +19,7 @@
 $ChatIcons:('icon_arrow', 'icon_config');
 @each $currentIcons in $ChatIcons{
     .#{$currentIcons}{
-        @include size(20%, 20%);
+        @include size(35px, 35px);
         @include background(url('../img/pc/#{$currentIcons}.svg') no-repeat,contain,0);
         position: absolute;
         z-index: 10;
@@ -47,9 +47,9 @@ $ChatIcons:('icon_arrow', 'icon_config');
 $menu:('top_menu_01','top_menu_02','top_menu_03','top_menu_04','top_menu_05');
 @each $currentMenu in $menu{
     .#{$currentMenu}{
-        width: 70%;
-        height: 90%;
-        @include background(url('../img/pc/#{$currentMenu}.png') no-repeat, contain,0 );
+        width: 18vh;
+        height: 20vh;
+        @include background(url('../img/pc/#{$currentMenu}.png') no-repeat, contain, 0);
         position: relative;
     }
 }
@@ -65,9 +65,9 @@ $fish: ('fish_1', 'fish_2', 'fish_3', 'fish_4');
 $game: ('game01', 'game02', 'game03');
 @each $currentGame in $game{
     .#{$currentGame}{
-        width: 500px;
-        height: 500px;
-        @include background(url('../img/pc/#{$currentGame}.png') no-repeat, 100%,0);
+        width: 33%;
+        min-height: 500px;
+        @include background(url('../img/pc/#{$currentGame}.png') no-repeat, contain,0);
         &:hover{
             opacity: 0.9;
         }
@@ -77,7 +77,8 @@ $game: ('game01', 'game02', 'game03');
 $footerMenu: ('bottom_menu_01', 'bottom_menu_02', 'bottom_menu_03', 'bottom_menu_04','bottom_menu_05','bottom_menu_06');
 @each $currentFooterMenu in $footerMenu{
     .#{$currentFooterMenu}{
-        @include size(140px,80%);
+        width: 140px;
+        height: 55px;
         @include background(url('../img/pc/#{$currentFooterMenu}.png') no-repeat, contain, 0);
     }
 }
