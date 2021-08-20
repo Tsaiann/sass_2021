@@ -44,28 +44,19 @@ $ChatIcons:('icon_arrow', 'icon_config');
         
     }
 }
-$menu:('top_menu_01','top_menu_02','top_menu_03','top_menu_04','top_menu_05');
-@each $currentMenu in $menu{
-    .#{$currentMenu}{
-        width: 18vh;
-        height: 20vh;
-        @include background(url('../img/pc/#{$currentMenu}.png') no-repeat, contain, 0);
-        position: relative;
-    }
-}
 
 $fish: ('fish_1', 'fish_2', 'fish_3', 'fish_4');
 @each $currentFish in $fish{
     .#{$currentFish}{
         @include size(25%,100%);
-        @include background(url('../img/pc/#{$currentFish}.png') no-repeat, contain, 0)
+        @include background(url('../img/pc/#{$currentFish}.png') no-repeat, contain, 0);
     }
 }
 
 $game: ('game01', 'game02', 'game03');
 @each $currentGame in $game{
     .#{$currentGame}{
-        width: 33%;
+        width: calc(100%/3);
         min-height: 500px;
         @include background(url('../img/pc/#{$currentGame}.png') no-repeat, contain,0);
         &:hover{
@@ -89,6 +80,13 @@ html {
         touch-action: manipulation;
         color: $white;
         font-size: 20px;
-        @include background(url('../img/pc/bg.jpg') no-repeat,cover,0);
     }
+}
+.container{
+    min-width: 1280px;
+    min-height: 720px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    @include background(url('../img/pc/bg.jpg') no-repeat center, cover, 0);
 }

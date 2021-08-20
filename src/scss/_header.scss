@@ -1,7 +1,15 @@
-.container{
-    min-width: 1280px;
-    min-height: 720px;
+$menu:('top_menu_01','top_menu_02','top_menu_03','top_menu_04','top_menu_05');
+@each $currentMenu in $menu{
+    .#{$currentMenu}{
+        min-width: 130px;
+        min-height: 130px;
+        width: 20vh;
+        height: 20vh;
+        @include background(url('../img/pc/#{$currentMenu}.png') no-repeat, contain, 0);
+        position: relative;
+    }
 }
+
 .header{
     width: 100%;
     min-height: 160px;
