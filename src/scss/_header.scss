@@ -1,0 +1,42 @@
+.navigator{
+    h1 img{
+        width: 128px;
+        height: 38px;
+    }
+    ul li{
+        color: #8D8D8D;
+    }
+    li + li{
+        margin-left: 30px;
+    }
+}
+
+.banner{
+    background: url('../img/perfume/banner.jpg') no-repeat;
+    background-size:contain;
+    max-width: 100%;
+    height: 870px;
+    position: relative;
+    div{
+        width: 370px;
+        color: white;
+        position: absolute;
+        top: 220px;
+        right: 200px;
+        h2{
+            font-size: 26px;
+            line-height: 40px;
+        }
+        p{
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 30px;
+        }
+        span{
+            border-radius: 30px;
+            border:1px solid white;
+            padding: 10px 100px;
+        
+        }
+    }
+}
